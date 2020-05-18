@@ -20,15 +20,41 @@ Json response:
 {
   "age":
     {
-      "years":1997,
-      "months":3,
-      "days":4
+      "years": 1997,
+      "months": 3,
+      "days": 4
     },
     "vinculation":
       {
-        "years":2020,
-        "months":4,
-        "days":25
+        "years": 2020,
+        "months": 4,
+        "days": 25
       }
 }
 ```
+
+#### Error Messages
+When some field is not added to url
+
+```ruby
+{
+  "message": "All fields are required"
+}
+```
+
+
+When some field is empty
+
+```ruby
+{
+  "message": "Fields is not should empty"
+}
+```
+
+
+
+When some date field is not formatted correct
+```ruby
+{
+  "message": "Date is not correct format"
+}
