@@ -6,6 +6,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.luis.enterpriseusers.jaxb.Employee;
+import com.luis.enterpriseusers.model.DetailDate;
 
 @Path("/rws")
 public class RestWebService {
@@ -14,8 +15,9 @@ public class RestWebService {
 	@Path("/employee/json")
 	@Produces({MediaType.APPLICATION_JSON})
 	public Employee getDataJSON() {
-		Employee em = new Employee();
-		em.setSaludo("23");
+		DetailDate vinculation = new DetailDate(1, 3, 14);
+		DetailDate age = new DetailDate(21, 2, 25);
+		Employee em = new Employee(age, vinculation);
 		return em;
 	}
 	
