@@ -52,10 +52,10 @@ public class RestWebService {
 		dh.setCalendar(calendar);
 		
 		dh.getCalendar().setTime(bithDate);
-		DetailDate vd = new DetailDate(dh.getYear(), dh.getMonth(), dh.getDay());
+		DetailDate age = new DetailDate(dh.getYear(), dh.getMonth(), dh.getDay());
 		
 		dh.getCalendar().setTime(vinculationDate);
-		DetailDate age = new DetailDate(dh.getYear(), dh.getMonth(), dh.getDay());
+		DetailDate vd = new DetailDate(dh.getYear(), dh.getMonth(), dh.getDay());
 		
 		Employee em = new Employee(age, vd);
 		return Response.status(202).entity(em).build();
