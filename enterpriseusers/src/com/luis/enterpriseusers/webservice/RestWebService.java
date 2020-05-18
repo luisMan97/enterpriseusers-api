@@ -28,13 +28,13 @@ public class RestWebService {
 								@QueryParam("birth") String birth,
 								@QueryParam("vinculation") String vinculation,
 								@QueryParam("position") String position,
-								@QueryParam("salary") Double salary) {
+								@QueryParam("salary") String salary) {
 		if (name == null || lastname == null || documentType == null || document == null || birth == null || vinculation == null || position == null || salary == null) {
 			ErrorMessage errorMessage = new ErrorMessage("All fields are required");
 			return Response.status(400).entity(errorMessage).build();
 		}
 		
-		if (name.isEmpty() || lastname.isEmpty() || documentType.isEmpty() || document.isEmpty() || birth.isEmpty() || vinculation.isEmpty() || position.isEmpty() || salary < 0) {
+		if (name.isEmpty() || lastname.isEmpty() || documentType.isEmpty() || document.isEmpty() || birth.isEmpty() || vinculation.isEmpty() || position.isEmpty() || salary.isEmpty()) {
 			ErrorMessage errorMessage = new ErrorMessage("Fields is not should empty");
 			return Response.status(400).entity(errorMessage).build();
 		}
