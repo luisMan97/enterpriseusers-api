@@ -42,13 +42,21 @@ public class RestWebService {
 		DateHelper dh = new DateHelper();
 		Date bithDate = dh.StringToDate(birth);
 		Date vinculationDate = dh.StringToDate(vinculation);
-		Calendar calendarBirth = Calendar.getInstance();
-		calendarBirth.setTime(bithDate);
-		Calendar calendarV = Calendar.getInstance();
-		calendarV.setTime(vinculationDate);
-	
-		DetailDate vd = new DetailDate(calendarBirth.get(Calendar.YEAR), calendarBirth.get(Calendar.MONTH), calendarBirth.get(Calendar.DAY_OF_MONTH));
-		DetailDate age = new DetailDate(calendarV.get(Calendar.YEAR), calendarV.get(Calendar.MONTH), calendarV.get(Calendar.DAY_OF_MONTH));
+		
+		if (bithDate == null || vinculationDate == null) {
+			ErrorMessage errorMessage = new ErrorMessage("Date is not correct format");
+			return Response.status(400).entity(errorMessage).build();
+		}
+		
+		Calendar calendar = Calendar.getInstance();
+		dh.setCalendar(calendar);
+		
+		dh.getCalendar().setTime(bithDate);
+		DetailDate vd = new DetailDate(dh.getYear(), dh.getMonth(), dh.getDay());
+		
+		dh.getCalendar().setTime(vinculationDate);
+		DetailDate age = new DetailDate(dh.getYear(), dh.getMonth(), dh.getDay());
+		
 		Employee em = new Employee(age, vd);
 		return Response.status(202).entity(em).build();
 	}
