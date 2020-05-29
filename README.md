@@ -51,7 +51,6 @@ When some field is not added to url
 }
 ```
 
-
 When some field is empty
 
 ```ruby
@@ -60,9 +59,14 @@ When some field is empty
 }
 ```
 
-
-
 When some date field is not formatted correct
+```ruby
+{
+  "message": "The employee should be adult"
+}
+```
+
+When age field is less to 18
 ```ruby
 {
   "message": "The employee should be adult"
