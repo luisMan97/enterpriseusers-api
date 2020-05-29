@@ -13,7 +13,8 @@ https://github.com/luisMan97/enterpriseusers-soap
 IMPORTANT: check the README.md
 
 #### Use
-1) Go to EmployeeController class.
+1) Open project with Spring Tool for Eclipse (https://spring.io/tools)
+2) Go to EmployeeController class.
 2) Tap on the Run button
 
 Example call get
