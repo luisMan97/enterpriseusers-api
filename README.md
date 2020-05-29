@@ -6,7 +6,7 @@ Run git clone to download proyect
 ```ruby
 git clone https://github.com/luisMan97/enterpriseusers-api.git
 ```
-First clone the next soap web service project
+First clone the next soap web service project and run
 
 https://github.com/luisMan97/enterpriseusers-soap
 
