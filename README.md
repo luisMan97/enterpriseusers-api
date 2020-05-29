@@ -8,9 +8,11 @@ git clone https://github.com/luisMan97/enterpriseusers-api.git
 ```
 
 #### Use
-First clone the next soap web service (IMPORTANT: read the README.md)
+First clone the next soap web service project
 
 https://github.com/luisMan97/enterpriseusers-soap
+
+IMPORTANT: read the README.md
 
 Example call get
 
