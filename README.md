@@ -8,6 +8,10 @@ git clone https://github.com/luisMan97/enterpriseusers-api.git
 ```
 
 #### Use
+First clone the next soap web service (IMPORTANT: read the README.md)
+
+https://github.com/luisMan97/enterpriseusers-soap
+
 Example call get
 
 ```ruby
@@ -56,5 +60,5 @@ When some field is empty
 When some date field is not formatted correct
 ```ruby
 {
-  "message": "Date is not correct format"
+  "message": "The employee should be adult"
 }
